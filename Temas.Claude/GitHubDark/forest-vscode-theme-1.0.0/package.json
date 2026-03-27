@@ -1,0 +1,20 @@
+{
+  "name": "forest-github-dark",
+  "displayName": "forest (GitHub Dark)",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "forest (GitHub Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./theme/forest.json"
+      }
+    ]
+  }
+}

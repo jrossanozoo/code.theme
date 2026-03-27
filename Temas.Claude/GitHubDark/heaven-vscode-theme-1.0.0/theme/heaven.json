@@ -1,0 +1,68 @@
+{
+  "name": "heaven (GitHub Dark)",
+  "type": "dark",
+  "include": "./../../_base/__github-dark.json",
+  "colors": {
+    "activityBar.background": "#1C6B75",
+    "activityBar.foreground": "#FFFFFF",
+    "activityBar.border": "#004852",
+    "activityBar.activeBorder": "#8FAFB3",
+    "activityBarBadge.background": "#8FAFB3",
+    "activityBarBadge.foreground": "#000000",
+    "titleBar.activeBackground": "#1C6B75",
+    "titleBar.activeForeground": "#FFFFFF",
+    "titleBar.inactiveBackground": "#085761",
+    "titleBar.inactiveForeground": "#A0A0A0",
+    "titleBar.border": "#004852",
+    "menubar.selectionBackground": "#35848E",
+    "menubar.selectionForeground": "#FFFFFF",
+    "menu.background": "#1C6B75",
+    "menu.foreground": "#FFFFFF",
+    "menu.selectionBackground": "#35848E",
+    "menu.selectionForeground": "#FFFFFF",
+    "menu.border": "#085761",
+    "statusBar.background": "#35848E",
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.border": "#085761",
+    "statusBar.noFolderBackground": "#1C6B75",
+    "statusBarItem.hoverBackground": "#44939D",
+    "tab.border": "#085761",
+    "tab.activeBorder": "#8FAFB3",
+    "tab.unfocusedActiveBorder": "#35848E",
+    "editorGroup.border": "#085761",
+    "panel.border": "#085761",
+    "focusBorder": "#8FAFB3",
+    "input.border": "#085761",
+    "button.background": "#35848E",
+    "button.hoverBackground": "#44939D",
+    "diffEditor.removedLineBackground": "#E1C2FF40",
+    "diffEditor.removedTextBackground": "#E1C2FF80",
+    "diffEditor.insertedLineBackground": "#EDFFC240",
+    "diffEditor.insertedTextBackground": "#EDFFC280"
+  },
+  "tokenColors": [
+    {
+      "name": "Language Syntax / Keywords",
+      "scope": [
+        "keyword",
+        "storage.type",
+        "storage.modifier",
+        "keyword.control"
+      ],
+      "settings": {
+        "foreground": "#7EFCFC"
+      }
+    },
+    {
+      "name": "String Literals",
+      "scope": [
+        "string",
+        "string.quoted",
+        "constant.other.symbol"
+      ],
+      "settings": {
+        "foreground": "#99FC7E"
+      }
+    }
+  ]
+}

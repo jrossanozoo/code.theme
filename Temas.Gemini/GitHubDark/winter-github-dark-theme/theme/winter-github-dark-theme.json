@@ -1,0 +1,11 @@
+{
+    "name": "winter (GitHub Dark)",
+    "type": "dark",
+    "colors": {
+        "activityBar.background": "#300063",
+        "titleBar.activeBackground": "#300063",
+        "statusBar.background": "#300063",
+        "activityBarBadge.background": "#300063"
+    },
+    "tokenColors": []
+}

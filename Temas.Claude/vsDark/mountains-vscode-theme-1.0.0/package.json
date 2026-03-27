@@ -1,0 +1,20 @@
+{
+  "name": "mountains-dark-plus",
+  "displayName": "mountains (Dark+)",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "mountains (Dark+)",
+        "uiTheme": "vs-dark",
+        "path": "./theme/mountains.json"
+      }
+    ]
+  }
+}

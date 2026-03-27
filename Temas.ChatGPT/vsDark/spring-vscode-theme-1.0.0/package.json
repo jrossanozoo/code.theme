@@ -1,0 +1,20 @@
+{
+  "name": "spring-darkplus",
+  "displayName": "Spring Dark+",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Spring Dark+",
+        "uiTheme": "vs-dark",
+        "path": "./theme/spring-dark-plus-color-theme.json"
+      }
+    ]
+  }
+}

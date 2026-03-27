@@ -1,0 +1,69 @@
+{
+  "name": "Tema 5 - Dark Plum",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#180026",
+    "editor.foreground": "#EDD8FF",
+    "editorLineNumber.foreground": "#6A2A8A",
+    "editorCursor.foreground": "#BB55EE",
+
+    "sideBar.background": "#500073",
+    "sideBar.foreground": "#FFFFFF",
+    "sideBar.border": "#7A2AAA",
+    "sideBarTitle.foreground": "#FFFFFF",
+    "sideBarSectionHeader.background": "#3A0054",
+    "sideBarSectionHeader.foreground": "#FFFFFF",
+
+    "activityBar.background": "#3A0054",
+    "activityBar.foreground": "#FFFFFF",
+    "activityBar.border": "#280038",
+    "activityBar.activeBorder": "#BB55EE",
+    "activityBarBadge.background": "#BB55EE",
+    "activityBarBadge.foreground": "#FFFFFF",
+
+    "titleBar.activeBackground": "#3A0054",
+    "titleBar.activeForeground": "#FFFFFF",
+    "titleBar.inactiveBackground": "#280038",
+    "titleBar.inactiveForeground": "#CC88EE",
+    "titleBar.border": "#280038",
+
+    "menubar.selectionBackground": "#500073",
+    "menubar.selectionForeground": "#FFFFFF",
+    "menu.background": "#3A0054",
+    "menu.foreground": "#FFFFFF",
+    "menu.selectionBackground": "#500073",
+    "menu.selectionForeground": "#FFFFFF",
+    "menu.border": "#7A2AAA",
+
+    "statusBar.background": "#500073",
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.border": "#7A2AAA",
+    "statusBar.noFolderBackground": "#3A0054",
+    "statusBarItem.hoverBackground": "#7A2AAA",
+
+    "tab.activeBackground": "#280038",
+    "tab.activeForeground": "#FFFFFF",
+    "tab.inactiveBackground": "#180026",
+    "tab.inactiveForeground": "#8844AA",
+    "tab.border": "#500073",
+    "tab.activeBorder": "#BB55EE",
+
+    "editorGroup.border": "#500073",
+    "panel.background": "#180026",
+    "panel.border": "#500073",
+
+    "input.background": "#280038",
+    "input.foreground": "#EDD8FF",
+    "input.border": "#500073",
+    "focusBorder": "#BB55EE",
+
+    "button.background": "#500073",
+    "button.foreground": "#FFFFFF",
+    "button.hoverBackground": "#7A2AAA",
+
+    "list.activeSelectionBackground": "#500073",
+    "list.activeSelectionForeground": "#FFFFFF",
+    "list.hoverBackground": "#3A005440",
+    "list.focusBackground": "#50007380"
+  }
+}

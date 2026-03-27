@@ -1,0 +1,16 @@
+{
+    "name": "heaven-vs-dark-theme",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "heaven (Dark+)",
+                "uiTheme": "vs-dark",
+                "path": "./theme/heaven-vs-dark-theme.json"
+            }
+        ]
+    }
+}

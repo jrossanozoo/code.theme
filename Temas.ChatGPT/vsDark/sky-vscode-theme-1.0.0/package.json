@@ -1,0 +1,20 @@
+{
+  "name": "sky-darkplus",
+  "displayName": "Sky Dark+",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Sky Dark+",
+        "uiTheme": "vs-dark",
+        "path": "./theme/sky-dark-plus-color-theme.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+    "name": "mountains (GitHub Dark)",
+    "type": "dark",
+    "colors": {
+        "activityBar.background": "#230052",
+        "titleBar.activeBackground": "#230052",
+        "statusBar.background": "#230052",
+        "activityBarBadge.background": "#230052",
+        "diffEditor.removedTextBackground": "#E1C2FF40",
+        "diffEditor.insertedTextBackground": "#EDFFC240"
+    },
+    "tokenColors": [
+        {
+            "scope": [
+                "keyword",
+                "storage",
+                "variable.language"
+            ],
+            "settings": {
+                "foreground": "#7EFCFC"
+            }
+        },
+        {
+            "scope": [
+                "string",
+                "constant.numeric",
+                "constant.language"
+            ],
+            "settings": {
+                "foreground": "#99FC7E"
+            }
+        }
+    ]
+}

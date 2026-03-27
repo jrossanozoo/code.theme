@@ -1,0 +1,36 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.colorTheme": "Navy Blue",
+		"workbench.colorCustomizations": {
+			"editor.background": "#001a33",
+			"editor.foreground": "#d4d4d4",
+			"editor.lineNumberColor": "#4a5f7f",
+			"editorLineNumber.activeForeground": "#7a9fdf",
+			"editor.selectionBackground": "#1a3a66",
+			"editor.selectionForeground": "#d4d4d4",
+			"editorCursor.foreground": "#7a9fdf",
+			"activityBar.background": "#001a33",
+			"activityBar.foreground": "#7a9fdf",
+			"sideBar.background": "#0a2a4a",
+			"sideBar.foreground": "#d4d4d4",
+			"editor.wordHighlightBackground": "#1a3a66",
+			"editor.wordHighlightStrongBackground": "#2a4a7a",
+			"terminal.background": "#001a33",
+			"terminal.foreground": "#7a9fdf",
+			"statusBar.background": "#0a2a4a",
+			"statusBar.foreground": "#7a9fdf",
+			"titleBar.activeBackground": "#0a2a4a",
+			"titleBar.activeForeground": "#7a9fdf"
+		}
+	},
+
+	// ============================================================
+    // ZOO TOOL KIT - Extensión para Visual FoxPro
+    // ============================================================
+	"zoo-tool-kit.showExtensionRecommendations": false	
+}

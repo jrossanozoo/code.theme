@@ -1,0 +1,16 @@
+{
+  "name": "navy-blue",
+  "displayName": "Navy Blue",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Navy Blue",
+        "uiTheme": "vs-dark",
+        "path": "./theme/navy-blue.json"
+      }
+    ]
+  }
+}

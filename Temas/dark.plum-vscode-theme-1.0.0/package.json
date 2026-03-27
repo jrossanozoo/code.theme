@@ -1,0 +1,16 @@
+{
+  "name": "dark-plum",
+  "displayName": "Dark Plum",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Dark Plum",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark-plum.json"
+      }
+    ]
+  }
+}

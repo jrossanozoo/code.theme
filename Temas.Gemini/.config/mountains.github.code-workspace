@@ -1,0 +1,38 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "workbench.colorTheme": "mountains (GitHub Dark)",
+        "workbench.colorCustomizations": {
+            "activityBar.background": "#230052",
+            "titleBar.activeBackground": "#230052",
+            "statusBar.background": "#230052",
+            "diffEditor.removedTextBackground": "#E1C2FF40",
+            "diffEditor.insertedTextBackground": "#EDFFC240",
+            "textMateRules": [
+                {
+                    "scope": [
+                        "keyword",
+                        "storage"
+                    ],
+                    "settings": {
+                        "foreground": "#7EFCFC"
+                    }
+                },
+                {
+                    "scope": [
+                        "string",
+                        "constant.numeric"
+                    ],
+                    "settings": {
+                        "foreground": "#99FC7E"
+                    }
+                }
+            ]
+        },
+        "zoo-tool-kit.showExtensionRecommendations": false
+    }
+}

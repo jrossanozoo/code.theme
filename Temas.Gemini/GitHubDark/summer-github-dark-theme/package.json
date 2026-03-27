@@ -1,0 +1,16 @@
+{
+    "name": "summer-github-dark-theme",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "summer (GitHub Dark)",
+                "uiTheme": "vs-dark",
+                "path": "./theme/summer-github-dark-theme.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "autumn (GitHub Dark)",
+    "type": "dark",
+    "colors": {
+        "activityBar.background": "#395200",
+        "titleBar.activeBackground": "#395200",
+        "statusBar.background": "#395200",
+        "activityBarBadge.background": "#395200"
+    },
+    "tokenColors": []
+}

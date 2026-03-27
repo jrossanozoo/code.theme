@@ -1,0 +1,16 @@
+{
+    "name": "winter-vs-dark-theme",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "winter (Dark+)",
+                "uiTheme": "vs-dark",
+                "path": "./theme/winter-vs-dark-theme.json"
+            }
+        ]
+    }
+}

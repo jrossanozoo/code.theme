@@ -1,0 +1,38 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "workbench.colorTheme": "sky (Dark+)",
+        "workbench.colorCustomizations": {
+            "activityBar.background": "#006B9C",
+            "titleBar.activeBackground": "#006B9C",
+            "statusBar.background": "#006B9C",
+            "diffEditor.removedTextBackground": "#E1C2FF40",
+            "diffEditor.insertedTextBackground": "#EDFFC240",
+            "textMateRules": [
+                {
+                    "scope": [
+                        "keyword",
+                        "storage"
+                    ],
+                    "settings": {
+                        "foreground": "#7EFCFC"
+                    }
+                },
+                {
+                    "scope": [
+                        "string",
+                        "constant.numeric"
+                    ],
+                    "settings": {
+                        "foreground": "#99FC7E"
+                    }
+                }
+            ]
+        },
+        "zoo-tool-kit.showExtensionRecommendations": false
+    }
+}

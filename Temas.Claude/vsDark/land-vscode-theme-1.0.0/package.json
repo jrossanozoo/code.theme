@@ -1,0 +1,20 @@
+{
+  "name": "land-dark-plus",
+  "displayName": "land (Dark+)",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "land (Dark+)",
+        "uiTheme": "vs-dark",
+        "path": "./theme/land.json"
+      }
+    ]
+  }
+}

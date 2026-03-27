@@ -1,0 +1,16 @@
+{
+    "name": "sky-github-dark-theme",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "sky (GitHub Dark)",
+                "uiTheme": "vs-dark",
+                "path": "./theme/sky-github-dark-theme.json"
+            }
+        ]
+    }
+}

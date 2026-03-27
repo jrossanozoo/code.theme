@@ -1,0 +1,16 @@
+{
+    "name": "forest-vs-dark-theme",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "forest (Dark+)",
+                "uiTheme": "vs-dark",
+                "path": "./theme/forest-vs-dark-theme.json"
+            }
+        ]
+    }
+}

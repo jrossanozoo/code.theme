@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "winter (Dark+)",
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#300063",
+      "activityBar.foreground": "#FFFFFF",
+      "activityBar.border": "#0D0040",
+      "activityBar.activeBorder": "#9784AC",
+      "activityBarBadge.background": "#9784AC",
+      "activityBarBadge.foreground": "#000000",
+      "titleBar.activeBackground": "#300063",
+      "titleBar.activeForeground": "#FFFFFF",
+      "titleBar.inactiveBackground": "#1C004F",
+      "titleBar.inactiveForeground": "#A0A0A0",
+      "titleBar.border": "#0D0040",
+      "statusBar.background": "#49197C",
+      "statusBar.foreground": "#FFFFFF",
+      "statusBar.border": "#1C004F",
+      "statusBar.noFolderBackground": "#300063",
+      "statusBarItem.hoverBackground": "#58288B"
+    },
+    "zoo-tool-kit.showExtensionRecommendations": false
+  }
+}

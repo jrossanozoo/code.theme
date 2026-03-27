@@ -1,0 +1,34 @@
+{
+    "name": "spring (Dark+)",
+    "type": "dark",
+    "colors": {
+        "activityBar.background": "#630059",
+        "titleBar.activeBackground": "#630059",
+        "statusBar.background": "#630059",
+        "activityBarBadge.background": "#630059",
+        "diffEditor.removedTextBackground": "#DFC2FF40",
+        "diffEditor.insertedTextBackground": "#C2FAFF40"
+    },
+    "tokenColors": [
+        {
+            "scope": [
+                "keyword",
+                "storage",
+                "variable.language"
+            ],
+            "settings": {
+                "foreground": "#F8C2FF"
+            }
+        },
+        {
+            "scope": [
+                "string",
+                "constant.numeric",
+                "constant.language"
+            ],
+            "settings": {
+                "foreground": "#C5FFC2"
+            }
+        }
+    ]
+}
