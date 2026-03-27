@@ -1,0 +1,20 @@
+{
+  "name": "autumn-github-dark",
+  "displayName": "Autumn GitHub Dark",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Autumn GitHub Dark",
+        "uiTheme": "vs-dark",
+        "path": "./theme/autumn-github-dark-color-theme.json"
+      }
+    ]
+  }
+}

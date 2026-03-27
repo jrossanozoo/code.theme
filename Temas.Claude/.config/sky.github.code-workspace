@@ -1,0 +1,58 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "sky (GitHub Dark)",
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#006B9C",
+      "activityBar.foreground": "#FFFFFF",
+      "activityBar.border": "#004879",
+      "activityBar.activeBorder": "#84AFC2",
+      "activityBarBadge.background": "#84AFC2",
+      "activityBarBadge.foreground": "#000000",
+      "titleBar.activeBackground": "#006B9C",
+      "titleBar.activeForeground": "#FFFFFF",
+      "titleBar.inactiveBackground": "#005788",
+      "titleBar.inactiveForeground": "#A0A0A0",
+      "titleBar.border": "#004879",
+      "statusBar.background": "#1984B5",
+      "statusBar.foreground": "#FFFFFF",
+      "statusBar.border": "#005788",
+      "statusBar.noFolderBackground": "#006B9C",
+      "statusBarItem.hoverBackground": "#2893C4",
+      "diffEditor.removedLineBackground": "#E1C2FF40",
+      "diffEditor.removedTextBackground": "#E1C2FF80",
+      "diffEditor.insertedLineBackground": "#EDFFC240",
+      "diffEditor.insertedTextBackground": "#EDFFC280"
+    },
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "scope": [
+            "keyword",
+            "storage.type",
+            "storage.modifier",
+            "keyword.control"
+          ],
+          "settings": {
+            "foreground": "#7EFCFC"
+          }
+        },
+        {
+          "scope": [
+            "string",
+            "string.quoted",
+            "constant.other.symbol"
+          ],
+          "settings": {
+            "foreground": "#99FC7E"
+          }
+        }
+      ]
+    },
+    "zoo-tool-kit.showExtensionRecommendations": false
+  }
+}

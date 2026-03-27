@@ -1,0 +1,16 @@
+{
+    "name": "mountains-github-dark-theme",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "mountains (GitHub Dark)",
+                "uiTheme": "vs-dark",
+                "path": "./theme/mountains-github-dark-theme.json"
+            }
+        ]
+    }
+}

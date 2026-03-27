@@ -1,0 +1,34 @@
+{
+    "name": "sky (GitHub Dark)",
+    "type": "dark",
+    "colors": {
+        "activityBar.background": "#006B9C",
+        "titleBar.activeBackground": "#006B9C",
+        "statusBar.background": "#006B9C",
+        "activityBarBadge.background": "#006B9C",
+        "diffEditor.removedTextBackground": "#E1C2FF40",
+        "diffEditor.insertedTextBackground": "#EDFFC240"
+    },
+    "tokenColors": [
+        {
+            "scope": [
+                "keyword",
+                "storage",
+                "variable.language"
+            ],
+            "settings": {
+                "foreground": "#7EFCFC"
+            }
+        },
+        {
+            "scope": [
+                "string",
+                "constant.numeric",
+                "constant.language"
+            ],
+            "settings": {
+                "foreground": "#99FC7E"
+            }
+        }
+    ]
+}

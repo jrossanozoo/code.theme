@@ -1,0 +1,58 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "summer (Dark+)",
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#4A4A02",
+      "activityBar.foreground": "#FFFFFF",
+      "activityBar.border": "#272700",
+      "activityBar.activeBorder": "#A2A285",
+      "activityBarBadge.background": "#A2A285",
+      "activityBarBadge.foreground": "#000000",
+      "titleBar.activeBackground": "#4A4A02",
+      "titleBar.activeForeground": "#FFFFFF",
+      "titleBar.inactiveBackground": "#363600",
+      "titleBar.inactiveForeground": "#A0A0A0",
+      "titleBar.border": "#272700",
+      "statusBar.background": "#63631B",
+      "statusBar.foreground": "#FFFFFF",
+      "statusBar.border": "#363600",
+      "statusBar.noFolderBackground": "#4A4A02",
+      "statusBarItem.hoverBackground": "#72722A",
+      "diffEditor.removedLineBackground": "#F7C2FF40",
+      "diffEditor.removedTextBackground": "#F7C2FF80",
+      "diffEditor.insertedLineBackground": "#C2FFC940",
+      "diffEditor.insertedTextBackground": "#C2FFC980"
+    },
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "scope": [
+            "keyword",
+            "storage.type",
+            "storage.modifier",
+            "keyword.control"
+          ],
+          "settings": {
+            "foreground": "#FFFAC2"
+          }
+        },
+        {
+          "scope": [
+            "string",
+            "string.quoted",
+            "constant.other.symbol"
+          ],
+          "settings": {
+            "foreground": "#C2E6FF"
+          }
+        }
+      ]
+    },
+    "zoo-tool-kit.showExtensionRecommendations": false
+  }
+}

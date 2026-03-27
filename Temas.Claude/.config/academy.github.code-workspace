@@ -1,0 +1,46 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "academy (GitHub Dark)",
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#162A94",
+      "activityBar.foreground": "#FFFFFF",
+      "activityBar.border": "#000771",
+      "activityBar.activeBorder": "#8D95BF",
+      "activityBarBadge.background": "#8D95BF",
+      "activityBarBadge.foreground": "#000000",
+      "titleBar.activeBackground": "#162A94",
+      "titleBar.activeForeground": "#FFFFFF",
+      "titleBar.inactiveBackground": "#021680",
+      "titleBar.inactiveForeground": "#A0A0A0",
+      "titleBar.border": "#000771",
+      "statusBar.background": "#2F43AD",
+      "statusBar.foreground": "#FFFFFF",
+      "statusBar.border": "#021680",
+      "statusBar.noFolderBackground": "#162A94",
+      "statusBarItem.hoverBackground": "#3E52BC",
+      "diffEditor.removedLineBackground": "#E1C2FF40",
+      "diffEditor.removedTextBackground": "#E1C2FF80",
+      "diffEditor.insertedLineBackground": "#EDFFC240",
+      "diffEditor.insertedTextBackground": "#EDFFC280"
+    },
+    "editor.tokenColorCustomizations": {
+      "textMateRules": {
+        "scope": [
+          "keyword",
+          "storage.type",
+          "storage.modifier",
+          "keyword.control"
+        ],
+        "settings": {
+          "foreground": "#7EFCFC"
+        }
+      }
+    },
+    "zoo-tool-kit.showExtensionRecommendations": false
+  }
+}

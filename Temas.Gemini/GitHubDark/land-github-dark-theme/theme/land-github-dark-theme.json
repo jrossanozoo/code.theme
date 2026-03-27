@@ -1,0 +1,34 @@
+{
+    "name": "land (GitHub Dark)",
+    "type": "dark",
+    "colors": {
+        "activityBar.background": "#664F03",
+        "titleBar.activeBackground": "#664F03",
+        "statusBar.background": "#664F03",
+        "activityBarBadge.background": "#664F03",
+        "diffEditor.removedTextBackground": "#FFC2CE40",
+        "diffEditor.insertedTextBackground": "#C3FFC240"
+    },
+    "tokenColors": [
+        {
+            "scope": [
+                "keyword",
+                "storage",
+                "variable.language"
+            ],
+            "settings": {
+                "foreground": "#FFF5C2"
+            }
+        },
+        {
+            "scope": [
+                "string",
+                "constant.numeric",
+                "constant.language"
+            ],
+            "settings": {
+                "foreground": "#eec200"
+            }
+        }
+    ]
+}

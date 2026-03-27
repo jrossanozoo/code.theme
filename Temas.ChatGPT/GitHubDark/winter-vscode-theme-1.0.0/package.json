@@ -1,0 +1,20 @@
+{
+  "name": "winter-github-dark",
+  "displayName": "Winter GitHub Dark",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Winter GitHub Dark",
+        "uiTheme": "vs-dark",
+        "path": "./theme/winter-github-dark-color-theme.json"
+      }
+    ]
+  }
+}

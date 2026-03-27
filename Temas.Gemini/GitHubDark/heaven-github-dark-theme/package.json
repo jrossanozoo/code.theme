@@ -1,0 +1,16 @@
+{
+    "name": "heaven-github-dark-theme",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "heaven (GitHub Dark)",
+                "uiTheme": "vs-dark",
+                "path": "./theme/heaven-github-dark-theme.json"
+            }
+        ]
+    }
+}

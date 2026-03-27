@@ -1,0 +1,68 @@
+{
+  "name": "mountains (Dark+)",
+  "type": "dark",
+  "include": "./../../_base/__dark-plus.json",
+  "colors": {
+    "activityBar.background": "#230052",
+    "activityBar.foreground": "#FFFFFF",
+    "activityBar.border": "#00002F",
+    "activityBar.activeBorder": "#9284A5",
+    "activityBarBadge.background": "#9284A5",
+    "activityBarBadge.foreground": "#000000",
+    "titleBar.activeBackground": "#230052",
+    "titleBar.activeForeground": "#FFFFFF",
+    "titleBar.inactiveBackground": "#0F003E",
+    "titleBar.inactiveForeground": "#A0A0A0",
+    "titleBar.border": "#00002F",
+    "menubar.selectionBackground": "#3C196B",
+    "menubar.selectionForeground": "#FFFFFF",
+    "menu.background": "#230052",
+    "menu.foreground": "#FFFFFF",
+    "menu.selectionBackground": "#3C196B",
+    "menu.selectionForeground": "#FFFFFF",
+    "menu.border": "#0F003E",
+    "statusBar.background": "#3C196B",
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.border": "#0F003E",
+    "statusBar.noFolderBackground": "#230052",
+    "statusBarItem.hoverBackground": "#4B287A",
+    "tab.border": "#0F003E",
+    "tab.activeBorder": "#9284A5",
+    "tab.unfocusedActiveBorder": "#3C196B",
+    "editorGroup.border": "#0F003E",
+    "panel.border": "#0F003E",
+    "focusBorder": "#9284A5",
+    "input.border": "#0F003E",
+    "button.background": "#3C196B",
+    "button.hoverBackground": "#4B287A",
+    "diffEditor.removedLineBackground": "#E1C2FF40",
+    "diffEditor.removedTextBackground": "#E1C2FF80",
+    "diffEditor.insertedLineBackground": "#EDFFC240",
+    "diffEditor.insertedTextBackground": "#EDFFC280"
+  },
+  "tokenColors": [
+    {
+      "name": "Language Syntax / Keywords",
+      "scope": [
+        "keyword",
+        "storage.type",
+        "storage.modifier",
+        "keyword.control"
+      ],
+      "settings": {
+        "foreground": "#7EFCFC"
+      }
+    },
+    {
+      "name": "String Literals",
+      "scope": [
+        "string",
+        "string.quoted",
+        "constant.other.symbol"
+      ],
+      "settings": {
+        "foreground": "#99FC7E"
+      }
+    }
+  ]
+}

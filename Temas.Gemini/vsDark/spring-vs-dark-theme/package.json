@@ -1,0 +1,16 @@
+{
+    "name": "spring-vs-dark-theme",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "spring (Dark+)",
+                "uiTheme": "vs-dark",
+                "path": "./theme/spring-vs-dark-theme.json"
+            }
+        ]
+    }
+}

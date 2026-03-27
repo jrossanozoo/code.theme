@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "workbench.colorTheme": "autumn (Dark+)",
+        "workbench.colorCustomizations": {
+            "activityBar.background": "#395200",
+            "titleBar.activeBackground": "#395200",
+            "statusBar.background": "#395200"
+        },
+        "zoo-tool-kit.showExtensionRecommendations": false
+    }
+}

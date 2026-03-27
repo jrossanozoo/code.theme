@@ -1,0 +1,34 @@
+{
+    "name": "forest (Dark+)",
+    "type": "dark",
+    "colors": {
+        "activityBar.background": "#044A02",
+        "titleBar.activeBackground": "#044A02",
+        "statusBar.background": "#044A02",
+        "activityBarBadge.background": "#044A02",
+        "diffEditor.removedTextBackground": "#FFE1C240",
+        "diffEditor.insertedTextBackground": "#E9C2FF40"
+    },
+    "tokenColors": [
+        {
+            "scope": [
+                "keyword",
+                "storage",
+                "variable.language"
+            ],
+            "settings": {
+                "foreground": "#C2FFC9"
+            }
+        },
+        {
+            "scope": [
+                "string",
+                "constant.numeric",
+                "constant.language"
+            ],
+            "settings": {
+                "foreground": "#C2E1FF"
+            }
+        }
+    ]
+}

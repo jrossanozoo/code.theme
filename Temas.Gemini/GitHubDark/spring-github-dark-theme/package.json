@@ -1,0 +1,16 @@
+{
+    "name": "spring-github-dark-theme",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "spring (GitHub Dark)",
+                "uiTheme": "vs-dark",
+                "path": "./theme/spring-github-dark-theme.json"
+            }
+        ]
+    }
+}

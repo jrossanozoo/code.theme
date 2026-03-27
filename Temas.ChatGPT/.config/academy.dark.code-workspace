@@ -1,0 +1,85 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "Dark+",
+    "workbench.colorCustomizations": {
+      "focusBorder": "#4959AC",
+      "activityBar.background": "#0F1D65",
+      "activityBar.foreground": "#FFFFFF",
+      "activityBar.border": "#0B1447",
+      "activityBar.activeBorder": "#4959AC",
+      "activityBarBadge.background": "#162A94",
+      "activityBarBadge.foreground": "#FFFFFF",
+      "titleBar.activeBackground": "#0F1D65",
+      "titleBar.activeForeground": "#FFFFFF",
+      "titleBar.inactiveBackground": "#0B1447",
+      "titleBar.inactiveForeground": "#6F7BBD",
+      "titleBar.border": "#0B1447",
+      "statusBar.background": "#162A94",
+      "statusBar.foreground": "#FFFFFF",
+      "statusBar.border": "#4959AC",
+      "statusBar.noFolderBackground": "#0F1D65",
+      "statusBar.noFolderForeground": "#FFFFFF",
+      "statusBarItem.hoverBackground": "#4959AC33",
+      "menubar.selectionBackground": "#162A9433",
+      "menubar.selectionForeground": "#FFFFFF",
+      "menu.selectionBackground": "#162A9433",
+      "menu.selectionForeground": "#FFFFFF",
+      "menu.border": "#0B1447",
+      "commandCenter.activeBackground": "#162A9430",
+      "commandCenter.activeForeground": "#FFFFFF",
+      "notificationCenterHeader.background": "#0F1D65",
+      "notificationCenterHeader.foreground": "#FFFFFF",
+      "notifications.background": "#121526",
+      "notifications.foreground": "#FFFFFF",
+      "notifications.border": "#162A94",
+      "panel.border": "#0B1447",
+      "sideBar.border": "#0B1447",
+      "editorGroup.border": "#0B1447",
+      "pickerGroup.border": "#162A94",
+      "inputOption.activeBorder": "#4959AC",
+      "badge.background": "#162A94",
+      "badge.foreground": "#FFFFFF",
+      "progressBar.background": "#4959AC",
+      "toolbar.hoverBackground": "#162A9422",
+      "toolbar.activeBackground": "#162A9433",
+      "diffEditor.removedLineBackground": "#E1C2FF1F",
+      "diffEditor.removedTextBackground": "#E1C2FF44",
+      "diffEditorGutter.removedLineBackground": "#E1C2FF66",
+      "diffEditor.insertedLineBackground": "#EDFFC21F",
+      "diffEditor.insertedTextBackground": "#EDFFC244",
+      "diffEditorGutter.insertedLineBackground": "#EDFFC266"
+    },
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "name": "Language syntax",
+          "scope": [
+            "keyword",
+            "keyword.control",
+            "keyword.operator.expression",
+            "keyword.operator.new",
+            "keyword.operator.word",
+            "storage",
+            "storage.type",
+            "storage.modifier"
+          ],
+          "settings": {
+            "foreground": "#7EFCFC"
+          }
+        }
+      ]
+    },
+    "editor.semanticTokenColorCustomizations": {
+      "enabled": true,
+      "rules": {
+        "keyword": "#7EFCFC"
+      }
+    }
+  },
+  "zoo-tool-kit.showExtensionRecommendations": false
+}

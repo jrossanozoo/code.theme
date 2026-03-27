@@ -1,0 +1,68 @@
+{
+  "name": "summer (Dark+)",
+  "type": "dark",
+  "include": "./../../_base/__dark-plus.json",
+  "colors": {
+    "activityBar.background": "#4A4A02",
+    "activityBar.foreground": "#FFFFFF",
+    "activityBar.border": "#272700",
+    "activityBar.activeBorder": "#A2A285",
+    "activityBarBadge.background": "#A2A285",
+    "activityBarBadge.foreground": "#000000",
+    "titleBar.activeBackground": "#4A4A02",
+    "titleBar.activeForeground": "#FFFFFF",
+    "titleBar.inactiveBackground": "#363600",
+    "titleBar.inactiveForeground": "#A0A0A0",
+    "titleBar.border": "#272700",
+    "menubar.selectionBackground": "#63631B",
+    "menubar.selectionForeground": "#FFFFFF",
+    "menu.background": "#4A4A02",
+    "menu.foreground": "#FFFFFF",
+    "menu.selectionBackground": "#63631B",
+    "menu.selectionForeground": "#FFFFFF",
+    "menu.border": "#363600",
+    "statusBar.background": "#63631B",
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.border": "#363600",
+    "statusBar.noFolderBackground": "#4A4A02",
+    "statusBarItem.hoverBackground": "#72722A",
+    "tab.border": "#363600",
+    "tab.activeBorder": "#A2A285",
+    "tab.unfocusedActiveBorder": "#63631B",
+    "editorGroup.border": "#363600",
+    "panel.border": "#363600",
+    "focusBorder": "#A2A285",
+    "input.border": "#363600",
+    "button.background": "#63631B",
+    "button.hoverBackground": "#72722A",
+    "diffEditor.removedLineBackground": "#F7C2FF40",
+    "diffEditor.removedTextBackground": "#F7C2FF80",
+    "diffEditor.insertedLineBackground": "#C2FFC940",
+    "diffEditor.insertedTextBackground": "#C2FFC980"
+  },
+  "tokenColors": [
+    {
+      "name": "Language Syntax / Keywords",
+      "scope": [
+        "keyword",
+        "storage.type",
+        "storage.modifier",
+        "keyword.control"
+      ],
+      "settings": {
+        "foreground": "#FFFAC2"
+      }
+    },
+    {
+      "name": "String Literals",
+      "scope": [
+        "string",
+        "string.quoted",
+        "constant.other.symbol"
+      ],
+      "settings": {
+        "foreground": "#C2E6FF"
+      }
+    }
+  ]
+}

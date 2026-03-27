@@ -1,0 +1,101 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.colorCustomizations": {
+      "focusBorder": "#4E8C93",
+      "activityBar.background": "#134950",
+      "activityBar.foreground": "#FFFFFF",
+      "activityBar.border": "#0D3338",
+      "activityBar.activeBorder": "#4E8C93",
+      "activityBarBadge.background": "#1C6B75",
+      "activityBarBadge.foreground": "#FFFFFF",
+      "titleBar.activeBackground": "#134950",
+      "titleBar.activeForeground": "#FFFFFF",
+      "titleBar.inactiveBackground": "#0D3338",
+      "titleBar.inactiveForeground": "#72A3A9",
+      "titleBar.border": "#0D3338",
+      "statusBar.background": "#1C6B75",
+      "statusBar.foreground": "#FFFFFF",
+      "statusBar.border": "#4E8C93",
+      "statusBar.noFolderBackground": "#134950",
+      "statusBar.noFolderForeground": "#FFFFFF",
+      "statusBarItem.hoverBackground": "#4E8C9333",
+      "menubar.selectionBackground": "#1C6B7533",
+      "menubar.selectionForeground": "#FFFFFF",
+      "menu.selectionBackground": "#1C6B7533",
+      "menu.selectionForeground": "#FFFFFF",
+      "menu.border": "#0D3338",
+      "commandCenter.activeBackground": "#1C6B7530",
+      "commandCenter.activeForeground": "#FFFFFF",
+      "notificationCenterHeader.background": "#134950",
+      "notificationCenterHeader.foreground": "#FFFFFF",
+      "notifications.background": "#131F21",
+      "notifications.foreground": "#FFFFFF",
+      "notifications.border": "#1C6B75",
+      "panel.border": "#0D3338",
+      "sideBar.border": "#0D3338",
+      "editorGroup.border": "#0D3338",
+      "pickerGroup.border": "#1C6B75",
+      "inputOption.activeBorder": "#4E8C93",
+      "badge.background": "#1C6B75",
+      "badge.foreground": "#FFFFFF",
+      "progressBar.background": "#4E8C93",
+      "toolbar.hoverBackground": "#1C6B7522",
+      "toolbar.activeBackground": "#1C6B7533",
+      "diffEditor.removedLineBackground": "#E1C2FF1F",
+      "diffEditor.removedTextBackground": "#E1C2FF44",
+      "diffEditorGutter.removedLineBackground": "#E1C2FF66",
+      "diffEditor.insertedLineBackground": "#EDFFC21F",
+      "diffEditor.insertedTextBackground": "#EDFFC244",
+      "diffEditorGutter.insertedLineBackground": "#EDFFC266"
+    },
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "name": "Language syntax",
+          "scope": [
+            "keyword",
+            "keyword.control",
+            "keyword.operator.expression",
+            "keyword.operator.new",
+            "keyword.operator.word",
+            "storage",
+            "storage.type",
+            "storage.modifier"
+          ],
+          "settings": {
+            "foreground": "#7EFCFC"
+          }
+        },
+        {
+          "name": "Literal values",
+          "scope": [
+            "string",
+            "string.quoted",
+            "constant.numeric",
+            "constant.language",
+            "constant.character",
+            "constant.escape"
+          ],
+          "settings": {
+            "foreground": "#99FC7E"
+          }
+        }
+      ]
+    },
+    "editor.semanticTokenColorCustomizations": {
+      "enabled": true,
+      "rules": {
+        "keyword": "#7EFCFC",
+        "string": "#99FC7E",
+        "number": "#99FC7E"
+      }
+    }
+  },
+  "zoo-tool-kit.showExtensionRecommendations": false
+}
