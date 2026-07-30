@@ -67,9 +67,55 @@
       "settings": {
         "foreground": "#FFF5C2"
       }
+    },
+    {
+      "name": "Literal values",
+      "scope": [
+        "string",
+        "string.quoted",
+        "constant.numeric",
+        "constant.language",
+        "constant.character",
+        "constant.escape"
+      ],
+      "settings": {
+        "foreground": "#99FC7E"
+      }
+    },
+    {
+      "name": "Links (Markdown + source)",
+      "scope": [
+        "string.other.link.title.markdown",
+        "meta.link.reference.markdown",
+        "meta.link.reference.def.markdown",
+        "meta.link.inline.markdown",
+        "markup.underline.link.markdown",
+        "markup.underline.link.image.markdown",
+        "markup.underline.link",
+        "string.other.link"
+      ],
+      "settings": {
+        "foreground": "#C5C2FF"
+      }
+    },
+    {
+      "name": "Comments",
+      "scope": [
+        "comment",
+        "comment.line",
+        "comment.block",
+        "comment.block.documentation",
+        "comment.block.html"
+      ],
+      "settings": {
+        "foreground": "#C2D0FF"
+      }
     }
   ],
   "semanticTokenColors": {
-    "keyword": "#FFF5C2"
+    "keyword": "#FFF5C2",
+    "string": "#99FC7E",
+    "number": "#99FC7E",
+    "comment": "#C2D0FF"
   }
 }

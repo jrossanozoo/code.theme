@@ -1,0 +1,20 @@
+{
+  "name": "racingclub-github-dark",
+  "displayName": "Racingclub GitHub Dark",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Racingclub GitHub Dark",
+        "uiTheme": "vs-dark",
+        "path": "./theme/racingclub-github-dark-color-theme.json"
+      }
+    ]
+  }
+}

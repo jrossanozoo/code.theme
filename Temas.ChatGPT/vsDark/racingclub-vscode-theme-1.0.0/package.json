@@ -1,0 +1,20 @@
+{
+  "name": "racingclub-darkplus",
+  "displayName": "Racingclub Dark+",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Racingclub Dark+",
+        "uiTheme": "vs-dark",
+        "path": "./theme/racingclub-dark-plus-color-theme.json"
+      }
+    ]
+  }
+}
