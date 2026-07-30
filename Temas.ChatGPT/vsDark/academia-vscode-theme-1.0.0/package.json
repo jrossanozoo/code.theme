@@ -1,0 +1,20 @@
+{
+  "name": "academia-darkplus",
+  "displayName": "Academia Dark+",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Academia Dark+",
+        "uiTheme": "vs-dark",
+        "path": "./theme/academia-dark-plus-color-theme.json"
+      }
+    ]
+  }
+}

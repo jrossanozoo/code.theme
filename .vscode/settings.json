@@ -1,0 +1,90 @@
+{
+    // ============================================================
+    // GITHUB COPILOT - Configuración de PromptOps
+    // ============================================================
+    "chat.promptFiles": true,
+    "chat.promptFilesLocations": {
+        ".github/prompts": true,
+        ".github/skills": true
+    },
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+
+    // ============================================================
+    // EDITOR - Configuración general del editor
+    // ============================================================
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": false,
+
+    // ============================================================
+    // FILES - Configuración de archivos y encoding
+    // ============================================================
+    
+    // Asociaciones de lenguaje por extensión
+    "files.associations": {
+        // Archivos Visual FoxPro (Windows-1252)
+        "*.prg": "foxpro",
+        "*.scx": "foxpro", 
+        "*.sct": "foxpro",
+        "*.vcx": "foxpro",
+        "*.vct": "foxpro",
+        "*.frx": "foxpro",
+        "*.frt": "foxpro",
+        "*.h": "foxpro",
+        
+        "*.instructions.md": "markdown",
+        "*.prompt.md": "markdown",
+        "*.agent.md": "markdown",
+
+		// Archivos NSIS
+        "*.nsi": "nsis",
+        "*.nsh": "nsis",
+        "*.nsddef": "nsis",
+        "*.nsdinc": "nsis"
+    },
+    
+    // Encoding por defecto del workspace (UTF-8 para archivos modernos)
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": false,
+    // Configuración de encoding para prevenir problemas con caracteres especiales
+    "files.defaultLanguage": "csharp",
+    "files.insertFinalNewline": true,
+    
+    // Encoding específico por lenguaje (CRÍTICO: debe estar DESPUÉS de files.encoding)
+    "[foxpro]": {
+        "files.encoding": "windows1252",
+        "editor.formatOnSave": false
+    },
+    
+    "[nsis]": {
+        "files.encoding": "utf8"
+    },
+
+    // Fin de línea
+    "files.eol": "\r\n",
+    "files.trimTrailingWhitespace": false,
+
+    "zoo-tool-kit.test.excludePatterns": [
+        "**/dovfp.Assets/**",
+        "**/FoxMock/**",
+        "**/bin/**",
+        "**/obj/**"
+    ],
+
+    // ============================================================
+    // ZOO TOOL KIT - Extensión para Visual FoxPro
+    // ============================================================
+    "zoo-tool-kit.test.testTimeout": 30,
+    "zoo-tool-kit.test.testExecutionTimeout": 30000,
+
+    // ============================================================
+    // .NET / C# - Configuración para proyectos mixtos
+    // ============================================================
+    "dotnet.test.enableTestExplorer": false,
+    "dotnet.preferCSharpExtension": true,
+    "dotnet.automaticallyCreateSolutionInWorkspace": false,
+	"omnisharp.enableMsBuildLoadProjectsOnDemam": false,
+	"zoo-tool-kit.test.testDiscoveryTimeout": 120,
+	"zoo-tool-kit.test.testParallelism": 1
+}

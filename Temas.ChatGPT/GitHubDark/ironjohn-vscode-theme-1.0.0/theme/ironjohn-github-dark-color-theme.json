@@ -1,0 +1,121 @@
+{
+  "$schema": "vscode://schemas/color-theme",
+  "name": "Ironjohn GitHub Dark",
+  "include": "../../_base/github-dark-default.json",
+  "semanticHighlighting": true,
+  "colors": {
+    "focusBorder": "#6F6F74",
+    "activityBar.background": "#303034",
+    "activityBar.foreground": "#FFFFFF",
+    "activityBar.border": "#222225",
+    "activityBar.activeBorder": "#6F6F74",
+    "activityBarBadge.background": "#46464D",
+    "activityBarBadge.foreground": "#FFFFFF",
+    "titleBar.activeBackground": "#303034",
+    "titleBar.activeForeground": "#FFFFFF",
+    "titleBar.inactiveBackground": "#222225",
+    "titleBar.inactiveForeground": "#8C8C91",
+    "titleBar.border": "#222225",
+    "statusBar.background": "#46464D",
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.border": "#6F6F74",
+    "statusBar.noFolderBackground": "#303034",
+    "statusBar.noFolderForeground": "#FFFFFF",
+    "statusBarItem.hoverBackground": "#6F6F7433",
+    "menubar.selectionBackground": "#46464D33",
+    "menubar.selectionForeground": "#FFFFFF",
+    "menu.selectionBackground": "#46464D33",
+    "menu.selectionForeground": "#FFFFFF",
+    "menu.border": "#222225",
+    "commandCenter.activeBackground": "#46464D30",
+    "commandCenter.activeForeground": "#FFFFFF",
+    "notificationCenterHeader.background": "#303034",
+    "notificationCenterHeader.foreground": "#FFFFFF",
+    "notifications.background": "#19191B",
+    "notifications.foreground": "#FFFFFF",
+    "notifications.border": "#46464D",
+    "panel.border": "#222225",
+    "sideBar.border": "#222225",
+    "editorGroup.border": "#222225",
+    "pickerGroup.border": "#46464D",
+    "inputOption.activeBorder": "#6F6F74",
+    "badge.background": "#46464D",
+    "badge.foreground": "#FFFFFF",
+    "progressBar.background": "#6F6F74",
+    "toolbar.hoverBackground": "#46464D22",
+    "toolbar.activeBackground": "#46464D33",
+    "diffEditor.removedLineBackground": "#8CFA9E1F",
+    "diffEditor.removedTextBackground": "#8CFA9E44",
+    "diffEditorGutter.removedLineBackground": "#8CFA9E66",
+    "diffEditor.insertedLineBackground": "#D6D1601F",
+    "diffEditor.insertedTextBackground": "#D6D16044",
+    "diffEditorGutter.insertedLineBackground": "#D6D16066"
+  },
+  "tokenColors": [
+    {
+      "name": "Language syntax",
+      "scope": [
+        "keyword",
+        "keyword.control",
+        "keyword.operator.expression",
+        "keyword.operator.new",
+        "keyword.operator.word",
+        "storage",
+        "storage.type",
+        "storage.modifier"
+      ],
+      "settings": {
+        "foreground": "#B8FDFF"
+      }
+    },
+    {
+      "name": "Literal values",
+      "scope": [
+        "string",
+        "string.quoted",
+        "constant.numeric",
+        "constant.language",
+        "constant.character",
+        "constant.escape"
+      ],
+      "settings": {
+        "foreground": "#D9B7F7"
+      }
+    },
+    {
+      "name": "Links (Markdown + source)",
+      "scope": [
+        "string.other.link.title.markdown",
+        "meta.link.reference.markdown",
+        "meta.link.reference.def.markdown",
+        "meta.link.inline.markdown",
+        "markup.underline.link.markdown",
+        "markup.underline.link.image.markdown",
+        "markup.underline.link",
+        "string.other.link"
+      ],
+      "settings": {
+        "foreground": "#6085D6"
+      }
+    },
+    {
+      "name": "Comments",
+      "scope": [
+        "comment",
+        "comment.line",
+        "comment.block",
+        "comment.block.documentation",
+        "comment.block.html"
+      ],
+      "settings": {
+        "foreground": "#D69160"
+      }
+    }
+  ],
+  "semanticTokenColors": {
+    "keyword": "#B8FDFF",
+    "string": "#D9B7F7",
+    "number": "#D9B7F7",
+    "comment": "#D69160"
+  }
+}

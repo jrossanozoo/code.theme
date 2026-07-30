@@ -1,0 +1,121 @@
+{
+  "$schema": "vscode://schemas/color-theme",
+  "name": "Racingclub GitHub Dark",
+  "include": "../../_base/github-dark-default.json",
+  "semanticHighlighting": true,
+  "colors": {
+    "focusBorder": "#53B5FD",
+    "activityBar.background": "#186DAB",
+    "activityBar.foreground": "#FFFFFF",
+    "activityBar.border": "#114D79",
+    "activityBar.activeBorder": "#53B5FD",
+    "activityBarBadge.background": "#23A0FC",
+    "activityBarBadge.foreground": "#FFFFFF",
+    "titleBar.activeBackground": "#186DAB",
+    "titleBar.activeForeground": "#FFFFFF",
+    "titleBar.inactiveBackground": "#114D79",
+    "titleBar.inactiveForeground": "#77C4FD",
+    "titleBar.border": "#114D79",
+    "statusBar.background": "#23A0FC",
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.border": "#53B5FD",
+    "statusBar.noFolderBackground": "#186DAB",
+    "statusBar.noFolderForeground": "#FFFFFF",
+    "statusBarItem.hoverBackground": "#53B5FD33",
+    "menubar.selectionBackground": "#23A0FC33",
+    "menubar.selectionForeground": "#FFFFFF",
+    "menu.selectionBackground": "#23A0FC33",
+    "menu.selectionForeground": "#FFFFFF",
+    "menu.border": "#114D79",
+    "commandCenter.activeBackground": "#23A0FC30",
+    "commandCenter.activeForeground": "#FFFFFF",
+    "notificationCenterHeader.background": "#186DAB",
+    "notificationCenterHeader.foreground": "#FFFFFF",
+    "notifications.background": "#142837",
+    "notifications.foreground": "#FFFFFF",
+    "notifications.border": "#23A0FC",
+    "panel.border": "#114D79",
+    "sideBar.border": "#114D79",
+    "editorGroup.border": "#114D79",
+    "pickerGroup.border": "#23A0FC",
+    "inputOption.activeBorder": "#53B5FD",
+    "badge.background": "#23A0FC",
+    "badge.foreground": "#FFFFFF",
+    "progressBar.background": "#53B5FD",
+    "toolbar.hoverBackground": "#23A0FC22",
+    "toolbar.activeBackground": "#23A0FC33",
+    "diffEditor.removedLineBackground": "#B45CE01F",
+    "diffEditor.removedTextBackground": "#B45CE044",
+    "diffEditorGutter.removedLineBackground": "#B45CE066",
+    "diffEditor.insertedLineBackground": "#F5A5361F",
+    "diffEditor.insertedTextBackground": "#F5A53644",
+    "diffEditorGutter.insertedLineBackground": "#F5A53666"
+  },
+  "tokenColors": [
+    {
+      "name": "Language syntax",
+      "scope": [
+        "keyword",
+        "keyword.control",
+        "keyword.operator.expression",
+        "keyword.operator.new",
+        "keyword.operator.word",
+        "storage",
+        "storage.type",
+        "storage.modifier"
+      ],
+      "settings": {
+        "foreground": "#AADDFA"
+      }
+    },
+    {
+      "name": "Literal values",
+      "scope": [
+        "string",
+        "string.quoted",
+        "constant.numeric",
+        "constant.language",
+        "constant.character",
+        "constant.escape"
+      ],
+      "settings": {
+        "foreground": "#30A10B"
+      }
+    },
+    {
+      "name": "Links (Markdown + source)",
+      "scope": [
+        "string.other.link.title.markdown",
+        "meta.link.reference.markdown",
+        "meta.link.reference.def.markdown",
+        "meta.link.inline.markdown",
+        "markup.underline.link.markdown",
+        "markup.underline.link.image.markdown",
+        "markup.underline.link",
+        "string.other.link"
+      ],
+      "settings": {
+        "foreground": "#607AD6"
+      }
+    },
+    {
+      "name": "Comments",
+      "scope": [
+        "comment",
+        "comment.line",
+        "comment.block",
+        "comment.block.documentation",
+        "comment.block.html"
+      ],
+      "settings": {
+        "foreground": "#99E37B"
+      }
+    }
+  ],
+  "semanticTokenColors": {
+    "keyword": "#AADDFA",
+    "string": "#30A10B",
+    "number": "#30A10B",
+    "comment": "#99E37B"
+  }
+}

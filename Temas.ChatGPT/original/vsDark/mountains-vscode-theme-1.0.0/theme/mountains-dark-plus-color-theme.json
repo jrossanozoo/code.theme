@@ -1,0 +1,91 @@
+{
+  "$schema": "vscode://schemas/color-theme",
+  "name": "Mountains Dark+",
+  "include": "../../_base/dark-plus.json",
+  "semanticHighlighting": true,
+  "colors": {
+    "focusBorder": "#533878",
+    "activityBar.background": "#180038",
+    "activityBar.foreground": "#FFFFFF",
+    "activityBar.border": "#110027",
+    "activityBar.activeBorder": "#533878",
+    "activityBarBadge.background": "#230052",
+    "activityBarBadge.foreground": "#FFFFFF",
+    "titleBar.activeBackground": "#180038",
+    "titleBar.activeForeground": "#FFFFFF",
+    "titleBar.inactiveBackground": "#110027",
+    "titleBar.inactiveForeground": "#776194",
+    "titleBar.border": "#110027",
+    "statusBar.background": "#230052",
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.border": "#533878",
+    "statusBar.noFolderBackground": "#180038",
+    "statusBar.noFolderForeground": "#FFFFFF",
+    "statusBarItem.hoverBackground": "#53387833",
+    "menubar.selectionBackground": "#23005233",
+    "menubar.selectionForeground": "#FFFFFF",
+    "menu.selectionBackground": "#23005233",
+    "menu.selectionForeground": "#FFFFFF",
+    "menu.border": "#110027",
+    "commandCenter.activeBackground": "#23005230",
+    "commandCenter.activeForeground": "#FFFFFF",
+    "notificationCenterHeader.background": "#180038",
+    "notificationCenterHeader.foreground": "#FFFFFF",
+    "notifications.background": "#140E1B",
+    "notifications.foreground": "#FFFFFF",
+    "notifications.border": "#230052",
+    "panel.border": "#110027",
+    "sideBar.border": "#110027",
+    "editorGroup.border": "#110027",
+    "pickerGroup.border": "#230052",
+    "inputOption.activeBorder": "#533878",
+    "badge.background": "#230052",
+    "badge.foreground": "#FFFFFF",
+    "progressBar.background": "#533878",
+    "toolbar.hoverBackground": "#23005222",
+    "toolbar.activeBackground": "#23005233",
+    "diffEditor.removedLineBackground": "#E1C2FF1F",
+    "diffEditor.removedTextBackground": "#E1C2FF44",
+    "diffEditorGutter.removedLineBackground": "#E1C2FF66",
+    "diffEditor.insertedLineBackground": "#EDFFC21F",
+    "diffEditor.insertedTextBackground": "#EDFFC244",
+    "diffEditorGutter.insertedLineBackground": "#EDFFC266"
+  },
+  "tokenColors": [
+    {
+      "name": "Language syntax",
+      "scope": [
+        "keyword",
+        "keyword.control",
+        "keyword.operator.expression",
+        "keyword.operator.new",
+        "keyword.operator.word",
+        "storage",
+        "storage.type",
+        "storage.modifier"
+      ],
+      "settings": {
+        "foreground": "#7EFCFC"
+      }
+    },
+    {
+      "name": "Literal values",
+      "scope": [
+        "string",
+        "string.quoted",
+        "constant.numeric",
+        "constant.language",
+        "constant.character",
+        "constant.escape"
+      ],
+      "settings": {
+        "foreground": "#99FC7E"
+      }
+    }
+  ],
+  "semanticTokenColors": {
+    "keyword": "#7EFCFC",
+    "string": "#99FC7E",
+    "number": "#99FC7E"
+  }
+}

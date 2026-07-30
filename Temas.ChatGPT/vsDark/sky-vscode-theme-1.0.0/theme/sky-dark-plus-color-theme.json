@@ -81,11 +81,41 @@
       "settings": {
         "foreground": "#99FC7E"
       }
+    },
+    {
+      "name": "Links (Markdown + source)",
+      "scope": [
+        "string.other.link.title.markdown",
+        "meta.link.reference.markdown",
+        "meta.link.reference.def.markdown",
+        "meta.link.inline.markdown",
+        "markup.underline.link.markdown",
+        "markup.underline.link.image.markdown",
+        "markup.underline.link",
+        "string.other.link"
+      ],
+      "settings": {
+        "foreground": "#C2CDFF"
+      }
+    },
+    {
+      "name": "Comments",
+      "scope": [
+        "comment",
+        "comment.line",
+        "comment.block",
+        "comment.block.documentation",
+        "comment.block.html"
+      ],
+      "settings": {
+        "foreground": "#FFE1C2"
+      }
     }
   ],
   "semanticTokenColors": {
     "keyword": "#7EFCFC",
     "string": "#99FC7E",
-    "number": "#99FC7E"
+    "number": "#99FC7E",
+    "comment": "#FFE1C2"
   }
 }

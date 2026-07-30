@@ -193,12 +193,16 @@ function Build-WorkbenchColors {
 function Build-TokenRules {
     param(
         [AllowNull()][string]$Syntax,
-        [AllowNull()][string]$Literal
+        [AllowNull()][string]$Literal,
+        [AllowNull()][string]$Link,
+        [AllowNull()][string]$Comment
     )
 
     $rules = New-Object System.Collections.Generic.List[object]
     $syntaxColor = Normalize-HexColor $Syntax
     $literalColor = Normalize-HexColor $Literal
+    $linkColor = Normalize-HexColor $Link
+    $commentColor = Normalize-HexColor $Comment
 
     if ($syntaxColor) {
         $rules.Add([ordered]@{
@@ -236,18 +240,55 @@ function Build-TokenRules {
         })
     }
 
+    if ($linkColor) {
+        $rules.Add([ordered]@{
+            name = 'Links (Markdown + source)'
+            scope = @(
+                'string.other.link.title.markdown',
+                'meta.link.reference.markdown',
+                'meta.link.reference.def.markdown',
+                'meta.link.inline.markdown',
+                'markup.underline.link.markdown',
+                'markup.underline.link.image.markdown',
+                'markup.underline.link',
+                'string.other.link'
+            )
+            settings = [ordered]@{
+                foreground = $linkColor
+            }
+        })
+    }
+
+    if ($commentColor) {
+        $rules.Add([ordered]@{
+            name = 'Comments'
+            scope = @(
+                'comment',
+                'comment.line',
+                'comment.block',
+                'comment.block.documentation',
+                'comment.block.html'
+            )
+            settings = [ordered]@{
+                foreground = $commentColor
+            }
+        })
+    }
+
     return $rules
 }
 
 function Build-SemanticTokenColors {
     param(
         [AllowNull()][string]$Syntax,
-        [AllowNull()][string]$Literal
+        [AllowNull()][string]$Literal,
+        [AllowNull()][string]$Comment
     )
 
     $colors = [ordered]@{}
     $syntaxColor = Normalize-HexColor $Syntax
     $literalColor = Normalize-HexColor $Literal
+    $commentColor = Normalize-HexColor $Comment
 
     if ($syntaxColor) {
         $colors['keyword'] = $syntaxColor
@@ -256,6 +297,10 @@ function Build-SemanticTokenColors {
     if ($literalColor) {
         $colors['string'] = $literalColor
         $colors['number'] = $literalColor
+    }
+
+    if ($commentColor) {
+        $colors['comment'] = $commentColor
     }
 
     return $colors
@@ -328,6 +373,8 @@ function New-ThemePackage {
         [string]$Principal,
         [AllowNull()][string]$Syntax,
         [AllowNull()][string]$Literal,
+        [AllowNull()][string]$Link,
+        [AllowNull()][string]$Comment,
         [AllowNull()][string]$DiffRemoved,
         [AllowNull()][string]$DiffAdded
     )
@@ -335,8 +382,8 @@ function New-ThemePackage {
     $folder = Join-Path $SeriesRoot ("{0}-vscode-theme-1.0.0" -f $Slug)
     $themePath = Join-Path $folder (Join-Path 'theme' $ThemeFileName)
     $themeLabel = "{0} {1}" -f $DisplayName, $LabelSuffix
-    $rules = @(Build-TokenRules -Syntax $Syntax -Literal $Literal)
-    $semanticTokenColors = Build-SemanticTokenColors -Syntax $Syntax -Literal $Literal
+    $rules = @(Build-TokenRules -Syntax $Syntax -Literal $Literal -Link $Link -Comment $Comment)
+    $semanticTokenColors = Build-SemanticTokenColors -Syntax $Syntax -Literal $Literal -Comment $Comment
 
     $packageJson = [ordered]@{
         name = ("{0}-{1}" -f $Slug, $LabelSuffix.ToLowerInvariant().Replace('+', 'plus').Replace(' ', '-'))
@@ -384,6 +431,8 @@ function New-WorkspaceFile {
         [string]$Principal,
         [AllowNull()][string]$Syntax,
         [AllowNull()][string]$Literal,
+        [AllowNull()][string]$Link,
+        [AllowNull()][string]$Comment,
         [AllowNull()][string]$DiffRemoved,
         [AllowNull()][string]$DiffAdded
     )
@@ -391,7 +440,7 @@ function New-WorkspaceFile {
     $workspace = [ordered]@{
         folders = @(
             [ordered]@{
-                path = '..'
+                path = '.'
             }
         )
         settings = [ordered]@{
@@ -401,14 +450,14 @@ function New-WorkspaceFile {
         'zoo-tool-kit.showExtensionRecommendations' = $false
     }
 
-    $rules = @(Build-TokenRules -Syntax $Syntax -Literal $Literal)
+    $rules = @(Build-TokenRules -Syntax $Syntax -Literal $Literal -Link $Link -Comment $Comment)
     if ($rules.Count -gt 0) {
         $workspace.settings['editor.tokenColorCustomizations'] = [ordered]@{
             textMateRules = @($rules)
         }
     }
 
-    $semanticTokenColors = Build-SemanticTokenColors -Syntax $Syntax -Literal $Literal
+    $semanticTokenColors = Build-SemanticTokenColors -Syntax $Syntax -Literal $Literal -Comment $Comment
     if ($semanticTokenColors.Count -gt 0) {
         $workspace.settings['editor.semanticTokenColorCustomizations'] = [ordered]@{
             enabled = $true
@@ -420,7 +469,7 @@ function New-WorkspaceFile {
 }
 
 [xml]$xml = Get-Content -Path $xmlPath
-$themeEntries = @($xml.VFPData.temas)
+$themeEntries = @($xml.VFPData.c_temas)
 
 if ($themeEntries.Count -eq 0) {
     throw 'No themes were found in temas.xml.'
@@ -447,6 +496,8 @@ foreach ($entry in $themeEntries) {
 
     $syntax = Normalize-HexColor $entry.sintaxis
     $literal = Normalize-HexColor $entry.literal
+    $link = Normalize-HexColor $entry.enlaces
+    $comment = Normalize-HexColor $entry.comentario
     $diffRemoved = Normalize-HexColor $entry.diff1
     $diffAdded = Normalize-HexColor $entry.diff2
 
@@ -460,6 +511,8 @@ foreach ($entry in $themeEntries) {
         -Principal $principal `
         -Syntax $syntax `
         -Literal $literal `
+        -Link $link `
+        -Comment $comment `
         -DiffRemoved $diffRemoved `
         -DiffAdded $diffAdded
 
@@ -473,6 +526,8 @@ foreach ($entry in $themeEntries) {
         -Principal $principal `
         -Syntax $syntax `
         -Literal $literal `
+        -Link $link `
+        -Comment $comment `
         -DiffRemoved $diffRemoved `
         -DiffAdded $diffAdded
 
@@ -482,6 +537,8 @@ foreach ($entry in $themeEntries) {
         -Principal $principal `
         -Syntax $syntax `
         -Literal $literal `
+        -Link $link `
+        -Comment $comment `
         -DiffRemoved $diffRemoved `
         -DiffAdded $diffAdded
 
@@ -491,6 +548,8 @@ foreach ($entry in $themeEntries) {
         -Principal $principal `
         -Syntax $syntax `
         -Literal $literal `
+        -Link $link `
+        -Comment $comment `
         -DiffRemoved $diffRemoved `
         -DiffAdded $diffAdded
 }

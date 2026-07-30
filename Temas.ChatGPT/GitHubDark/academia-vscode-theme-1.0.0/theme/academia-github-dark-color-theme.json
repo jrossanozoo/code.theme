@@ -1,0 +1,121 @@
+{
+  "$schema": "vscode://schemas/color-theme",
+  "name": "Academia GitHub Dark",
+  "include": "../../_base/github-dark-default.json",
+  "semanticHighlighting": true,
+  "colors": {
+    "focusBorder": "#9A59BF",
+    "activityBar.background": "#551D76",
+    "activityBar.foreground": "#FFFFFF",
+    "activityBar.border": "#3C1453",
+    "activityBar.activeBorder": "#9A59BF",
+    "activityBarBadge.background": "#7D2AAD",
+    "activityBarBadge.foreground": "#FFFFFF",
+    "titleBar.activeBackground": "#551D76",
+    "titleBar.activeForeground": "#FFFFFF",
+    "titleBar.inactiveBackground": "#3C1453",
+    "titleBar.inactiveForeground": "#AE7BCC",
+    "titleBar.border": "#3C1453",
+    "statusBar.background": "#7D2AAD",
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.border": "#9A59BF",
+    "statusBar.noFolderBackground": "#551D76",
+    "statusBar.noFolderForeground": "#FFFFFF",
+    "statusBarItem.hoverBackground": "#9A59BF33",
+    "menubar.selectionBackground": "#7D2AAD33",
+    "menubar.selectionForeground": "#FFFFFF",
+    "menu.selectionBackground": "#7D2AAD33",
+    "menu.selectionForeground": "#FFFFFF",
+    "menu.border": "#3C1453",
+    "commandCenter.activeBackground": "#7D2AAD30",
+    "commandCenter.activeForeground": "#FFFFFF",
+    "notificationCenterHeader.background": "#551D76",
+    "notificationCenterHeader.foreground": "#FFFFFF",
+    "notifications.background": "#22152A",
+    "notifications.foreground": "#FFFFFF",
+    "notifications.border": "#7D2AAD",
+    "panel.border": "#3C1453",
+    "sideBar.border": "#3C1453",
+    "editorGroup.border": "#3C1453",
+    "pickerGroup.border": "#7D2AAD",
+    "inputOption.activeBorder": "#9A59BF",
+    "badge.background": "#7D2AAD",
+    "badge.foreground": "#FFFFFF",
+    "progressBar.background": "#9A59BF",
+    "toolbar.hoverBackground": "#7D2AAD22",
+    "toolbar.activeBackground": "#7D2AAD33",
+    "diffEditor.removedLineBackground": "#00D6E31F",
+    "diffEditor.removedTextBackground": "#00D6E344",
+    "diffEditorGutter.removedLineBackground": "#00D6E366",
+    "diffEditor.insertedLineBackground": "#DB960C1F",
+    "diffEditor.insertedTextBackground": "#DB960C44",
+    "diffEditorGutter.insertedLineBackground": "#DB960C66"
+  },
+  "tokenColors": [
+    {
+      "name": "Language syntax",
+      "scope": [
+        "keyword",
+        "keyword.control",
+        "keyword.operator.expression",
+        "keyword.operator.new",
+        "keyword.operator.word",
+        "storage",
+        "storage.type",
+        "storage.modifier"
+      ],
+      "settings": {
+        "foreground": "#3ED4ED"
+      }
+    },
+    {
+      "name": "Literal values",
+      "scope": [
+        "string",
+        "string.quoted",
+        "constant.numeric",
+        "constant.language",
+        "constant.character",
+        "constant.escape"
+      ],
+      "settings": {
+        "foreground": "#2B850F"
+      }
+    },
+    {
+      "name": "Links (Markdown + source)",
+      "scope": [
+        "string.other.link.title.markdown",
+        "meta.link.reference.markdown",
+        "meta.link.reference.def.markdown",
+        "meta.link.inline.markdown",
+        "markup.underline.link.markdown",
+        "markup.underline.link.image.markdown",
+        "markup.underline.link",
+        "string.other.link"
+      ],
+      "settings": {
+        "foreground": "#9208BD"
+      }
+    },
+    {
+      "name": "Comments",
+      "scope": [
+        "comment",
+        "comment.line",
+        "comment.block",
+        "comment.block.documentation",
+        "comment.block.html"
+      ],
+      "settings": {
+        "foreground": "#BF90DE"
+      }
+    }
+  ],
+  "semanticTokenColors": {
+    "keyword": "#3ED4ED",
+    "string": "#2B850F",
+    "number": "#2B850F",
+    "comment": "#BF90DE"
+  }
+}
