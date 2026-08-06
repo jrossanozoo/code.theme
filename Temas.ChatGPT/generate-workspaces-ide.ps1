@@ -1,22 +1,18 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
+# Genera archivos .code-workspace a partir de temasIDE.xml (raiz del repo).
+# A diferencia de generate-themes.ps1, si un tema define <barraSuperior>,
+# <barraInferior> y/o <barraHerramientas>, esos colores tienen prioridad sobre
+# <principal> para la barra de titulo (titleBar), la barra de estado (statusBar)
+# y la barra lateral de herramientas (activityBar) respectivamente. Si alguno de
+# los tres queda vacio, esa barra sigue derivandose de <principal> como hasta ahora.
+# El resto de las reglas (sintaxis, literales, enlaces, comentarios, diffs) no cambia.
+
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
-$xmlPath = Join-Path $root 'temas.xml'
-$vsDarkRoot = Join-Path $root 'vsDark'
-$gitHubDarkRoot = Join-Path $root 'GitHubDark'
-$configRoot = Join-Path $root '.config'
-
-function ConvertTo-DisplayName {
-    param([string]$Name)
-
-    if ([string]::IsNullOrWhiteSpace($Name)) {
-        throw 'Theme name cannot be empty.'
-    }
-
-    $textInfo = [System.Globalization.CultureInfo]::InvariantCulture.TextInfo
-    return $textInfo.ToTitleCase($Name.ToLowerInvariant().Replace('-', ' ').Replace('_', ' '))
-}
+$repoRoot = Split-Path -Parent $root
+$xmlPath = Join-Path $repoRoot 'temasIDE.xml'
+$configRoot = Join-Path $root '.config-ide'
 
 function Normalize-HexColor {
     param([AllowNull()][string]$Value)
@@ -113,6 +109,9 @@ function Get-ContrastForeground {
 function Build-WorkbenchColors {
     param(
         [string]$Principal,
+        [AllowNull()][string]$BarraSuperior,
+        [AllowNull()][string]$BarraInferior,
+        [AllowNull()][string]$BarraHerramientas,
         [AllowNull()][string]$DiffRemoved,
         [AllowNull()][string]$DiffAdded
     )
@@ -130,23 +129,73 @@ function Build-WorkbenchColors {
     $foreground = Get-ContrastForeground $principalDark
     $badgeForeground = Get-ContrastForeground $principal
 
+    # Barra de titulo (barra superior): usa <barraSuperior> si esta definida,
+    # si no cae al mismo derivado de <principal> que usa generate-themes.ps1.
+    $barraSuperior = Normalize-HexColor $BarraSuperior
+    if ($barraSuperior) {
+        $titleBackground = $barraSuperior
+        $titleBackgroundInactive = Blend-Color $barraSuperior '#000000' 0.32
+        $titleBorder = Blend-Color $barraSuperior '#000000' 0.52
+        $titleForeground = Get-ContrastForeground $barraSuperior
+        $titleForegroundInactive = Blend-Color $barraSuperior '#FFFFFF' 0.38
+    }
+    else {
+        $titleBackground = $principalDark
+        $titleBackgroundInactive = $principalDarker
+        $titleBorder = $principalDarker
+        $titleForeground = $foreground
+        $titleForegroundInactive = $principalSoft
+    }
+
+    # Barra de estado (barra inferior): usa <barraInferior> si esta definida,
+    # si no cae al mismo derivado de <principal> que usa generate-themes.ps1.
+    $barraInferior = Normalize-HexColor $BarraInferior
+    if ($barraInferior) {
+        $statusBackground = $barraInferior
+        $statusBorder = Blend-Color $barraInferior '#FFFFFF' 0.22
+        $statusNoFolderBackground = Blend-Color $barraInferior '#000000' 0.32
+        $statusForeground = Get-ContrastForeground $barraInferior
+    }
+    else {
+        $statusBackground = $principal
+        $statusBorder = $principalLight
+        $statusNoFolderBackground = $principalDark
+        $statusForeground = $badgeForeground
+    }
+
+    # Barra lateral de herramientas (activityBar): usa <barraHerramientas> si esta
+    # definida, si no cae al mismo derivado de <principal> que usa generate-themes.ps1.
+    $barraHerramientas = Normalize-HexColor $BarraHerramientas
+    if ($barraHerramientas) {
+        $activityBackground = $barraHerramientas
+        $activityBorder = Blend-Color $barraHerramientas '#000000' 0.52
+        $activityActiveBorder = Blend-Color $barraHerramientas '#FFFFFF' 0.22
+        $activityForeground = Get-ContrastForeground $barraHerramientas
+    }
+    else {
+        $activityBackground = $principalDark
+        $activityBorder = $principalDarker
+        $activityActiveBorder = $principalLight
+        $activityForeground = $foreground
+    }
+
     $colors = [ordered]@{
         'focusBorder' = $principalLight
-        'activityBar.background' = $principalDark
-        'activityBar.foreground' = $foreground
-        'activityBar.border' = $principalDarker
-        'activityBar.activeBorder' = $principalLight
+        'activityBar.background' = $activityBackground
+        'activityBar.foreground' = $activityForeground
+        'activityBar.border' = $activityBorder
+        'activityBar.activeBorder' = $activityActiveBorder
         'activityBarBadge.background' = $principal
         'activityBarBadge.foreground' = $badgeForeground
-        'titleBar.activeBackground' = $principalDark
-        'titleBar.activeForeground' = $foreground
-        'titleBar.inactiveBackground' = $principalDarker
-        'titleBar.inactiveForeground' = $principalSoft
-        'titleBar.border' = $principalDarker
-        'statusBar.background' = $principal
-        'statusBar.foreground' = $badgeForeground
-        'statusBar.border' = $principalLight
-        'statusBar.noFolderBackground' = $principalDark
+        'titleBar.activeBackground' = $titleBackground
+        'titleBar.activeForeground' = $titleForeground
+        'titleBar.inactiveBackground' = $titleBackgroundInactive
+        'titleBar.inactiveForeground' = $titleForegroundInactive
+        'titleBar.border' = $titleBorder
+        'statusBar.background' = $statusBackground
+        'statusBar.foreground' = $statusForeground
+        'statusBar.border' = $statusBorder
+        'statusBar.noFolderBackground' = $statusNoFolderBackground
         'statusBar.noFolderForeground' = $foreground
         'statusBarItem.hoverBackground' = Set-Alpha $principalLight '33'
         'menubar.selectionBackground' = Set-Alpha $principal '33'
@@ -321,114 +370,14 @@ function Write-JsonFile {
     [System.IO.File]::WriteAllText($Path, $json + [Environment]::NewLine, [System.Text.UTF8Encoding]::new($false))
 }
 
-function Ensure-DarkPlusBase {
-    param([string]$TargetPath)
-
-    $sourceCandidates = @(
-        (Join-Path $env:LOCALAPPDATA 'Programs\Microsoft VS Code\resources\app\extensions\theme-defaults\themes\dark_plus.json'),
-        'C:\Program Files\Microsoft VS Code\resources\app\extensions\theme-defaults\themes\dark_plus.json',
-        'C:\Program Files (x86)\Microsoft VS Code\resources\app\extensions\theme-defaults\themes\dark_plus.json'
-    )
-
-    $localSource = $sourceCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
-    if ($localSource) {
-        Copy-Item -Path $localSource -Destination $TargetPath -Force
-        return
-    }
-
-    $uri = 'https://raw.githubusercontent.com/microsoft/vscode/main/extensions/theme-defaults/themes/dark_plus.json'
-    Invoke-WebRequest -Uri $uri -OutFile $TargetPath
-}
-
-function Ensure-GitHubDarkBase {
-    param([string]$TargetPath)
-
-    $extensionsPath = Join-Path $env:USERPROFILE '.vscode\extensions'
-    if (-not (Test-Path $extensionsPath)) {
-        throw 'GitHub Theme extension was not found under the VS Code extensions directory.'
-    }
-
-    $source = Get-ChildItem -Path $extensionsPath -Directory |
-        Where-Object { $_.Name -like 'github.github-vscode-theme*' } |
-        Sort-Object Name -Descending |
-        ForEach-Object { Join-Path $_.FullName 'themes\dark-default.json' } |
-        Where-Object { Test-Path $_ } |
-        Select-Object -First 1
-
-    if (-not $source) {
-        throw 'GitHub Dark Default theme file was not found in installed extensions.'
-    }
-
-    Copy-Item -Path $source -Destination $TargetPath -Force
-}
-
-function New-ThemePackage {
-    param(
-        [string]$SeriesRoot,
-        [string]$BaseInclude,
-        [string]$Slug,
-        [string]$DisplayName,
-        [string]$LabelSuffix,
-        [string]$ThemeFileName,
-        [string]$Principal,
-        [AllowNull()][string]$Syntax,
-        [AllowNull()][string]$Literal,
-        [AllowNull()][string]$Link,
-        [AllowNull()][string]$Comment,
-        [AllowNull()][string]$DiffRemoved,
-        [AllowNull()][string]$DiffAdded
-    )
-
-    $folder = Join-Path $SeriesRoot ("{0}-vscode-theme-1.0.0" -f $Slug)
-    $themePath = Join-Path $folder (Join-Path 'theme' $ThemeFileName)
-    $themeLabel = "{0} {1}" -f $DisplayName, $LabelSuffix
-    $rules = @(Build-TokenRules -Syntax $Syntax -Literal $Literal -Link $Link -Comment $Comment)
-    $semanticTokenColors = Build-SemanticTokenColors -Syntax $Syntax -Literal $Literal -Comment $Comment
-
-    $packageJson = [ordered]@{
-        name = ("{0}-{1}" -f $Slug, $LabelSuffix.ToLowerInvariant().Replace('+', 'plus').Replace(' ', '-'))
-        displayName = $themeLabel
-        version = '1.0.0'
-        engines = [ordered]@{
-            vscode = '^1.85.0'
-        }
-        categories = @('Themes')
-        contributes = [ordered]@{
-            themes = @(
-                [ordered]@{
-                    label = $themeLabel
-                    uiTheme = 'vs-dark'
-                    path = "./theme/$ThemeFileName"
-                }
-            )
-        }
-    }
-
-    $themeJson = [ordered]@{
-        '$schema' = 'vscode://schemas/color-theme'
-        name = $themeLabel
-        include = $BaseInclude
-        semanticHighlighting = $true
-        colors = Build-WorkbenchColors -Principal $Principal -DiffRemoved $DiffRemoved -DiffAdded $DiffAdded
-    }
-
-    if ($rules.Count -gt 0) {
-        $themeJson.tokenColors = @($rules)
-    }
-
-    if ($semanticTokenColors.Count -gt 0) {
-        $themeJson.semanticTokenColors = $semanticTokenColors
-    }
-
-    Write-JsonFile -Path (Join-Path $folder 'package.json') -Content $packageJson
-    Write-JsonFile -Path $themePath -Content $themeJson
-}
-
 function New-WorkspaceFile {
     param(
         [string]$BaseThemeName,
         [string]$OutputPath,
         [string]$Principal,
+        [AllowNull()][string]$BarraSuperior,
+        [AllowNull()][string]$BarraInferior,
+        [AllowNull()][string]$BarraHerramientas,
         [AllowNull()][string]$Syntax,
         [AllowNull()][string]$Literal,
         [AllowNull()][string]$Link,
@@ -445,7 +394,7 @@ function New-WorkspaceFile {
         )
         settings = [ordered]@{
             'workbench.colorTheme' = $BaseThemeName
-            'workbench.colorCustomizations' = Build-WorkbenchColors -Principal $Principal -DiffRemoved $DiffRemoved -DiffAdded $DiffAdded
+            'workbench.colorCustomizations' = Build-WorkbenchColors -Principal $Principal -BarraSuperior $BarraSuperior -BarraInferior $BarraInferior -BarraHerramientas $BarraHerramientas -DiffRemoved $DiffRemoved -DiffAdded $DiffAdded
         }
         'zoo-tool-kit.showExtensionRecommendations' = $false
     }
@@ -472,22 +421,13 @@ function New-WorkspaceFile {
 $themeEntries = @($xml.VFPData.c_temas)
 
 if ($themeEntries.Count -eq 0) {
-    throw 'No themes were found in temas.xml.'
+    throw 'No themes were found in temasIDE.xml.'
 }
 
-New-Item -ItemType Directory -Path (Join-Path $vsDarkRoot '_base') -Force | Out-Null
-New-Item -ItemType Directory -Path (Join-Path $gitHubDarkRoot '_base') -Force | Out-Null
 New-Item -ItemType Directory -Path $configRoot -Force | Out-Null
-
-$darkPlusBasePath = Join-Path $vsDarkRoot '_base\dark-plus.json'
-$gitHubDarkBasePath = Join-Path $gitHubDarkRoot '_base\github-dark-default.json'
-
-Ensure-DarkPlusBase -TargetPath $darkPlusBasePath
-Ensure-GitHubDarkBase -TargetPath $gitHubDarkBasePath
 
 foreach ($entry in $themeEntries) {
     $slug = $entry.tema.Trim().ToLowerInvariant()
-    $displayName = ConvertTo-DisplayName $slug
     $principal = Normalize-HexColor $entry.principal
 
     if (-not $principal) {
@@ -500,41 +440,17 @@ foreach ($entry in $themeEntries) {
     $comment = Normalize-HexColor $entry.comentario
     $diffRemoved = Normalize-HexColor $entry.diff1
     $diffAdded = Normalize-HexColor $entry.diff2
-
-    New-ThemePackage `
-        -SeriesRoot $vsDarkRoot `
-        -BaseInclude '../../_base/dark-plus.json' `
-        -Slug $slug `
-        -DisplayName $displayName `
-        -LabelSuffix 'Dark+' `
-        -ThemeFileName ("{0}-dark-plus-color-theme.json" -f $slug) `
-        -Principal $principal `
-        -Syntax $syntax `
-        -Literal $literal `
-        -Link $link `
-        -Comment $comment `
-        -DiffRemoved $diffRemoved `
-        -DiffAdded $diffAdded
-
-    New-ThemePackage `
-        -SeriesRoot $gitHubDarkRoot `
-        -BaseInclude '../../_base/github-dark-default.json' `
-        -Slug $slug `
-        -DisplayName $displayName `
-        -LabelSuffix 'GitHub Dark' `
-        -ThemeFileName ("{0}-github-dark-color-theme.json" -f $slug) `
-        -Principal $principal `
-        -Syntax $syntax `
-        -Literal $literal `
-        -Link $link `
-        -Comment $comment `
-        -DiffRemoved $diffRemoved `
-        -DiffAdded $diffAdded
+    $barraSuperior = Normalize-HexColor $entry.barraSuperior
+    $barraInferior = Normalize-HexColor $entry.barraInferior
+    $barraHerramientas = Normalize-HexColor $entry.barraHerramientas
 
     New-WorkspaceFile `
         -BaseThemeName 'Dark+' `
         -OutputPath (Join-Path $configRoot ("{0}.dark.code-workspace" -f $slug)) `
         -Principal $principal `
+        -BarraSuperior $barraSuperior `
+        -BarraInferior $barraInferior `
+        -BarraHerramientas $barraHerramientas `
         -Syntax $syntax `
         -Literal $literal `
         -Link $link `
@@ -546,6 +462,9 @@ foreach ($entry in $themeEntries) {
         -BaseThemeName 'GitHub Dark Default' `
         -OutputPath (Join-Path $configRoot ("{0}.github.code-workspace" -f $slug)) `
         -Principal $principal `
+        -BarraSuperior $barraSuperior `
+        -BarraInferior $barraInferior `
+        -BarraHerramientas $barraHerramientas `
         -Syntax $syntax `
         -Literal $literal `
         -Link $link `
@@ -554,4 +473,4 @@ foreach ($entry in $themeEntries) {
         -DiffAdded $diffAdded
 }
 
-Write-Host ("Generated {0} themes in vsDark, {0} themes in GitHubDark, and {1} workspace files." -f $themeEntries.Count, ($themeEntries.Count * 2))
+Write-Host ("Generated {0} workspace files in {1}." -f ($themeEntries.Count * 2), $configRoot)

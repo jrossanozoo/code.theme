@@ -1,0 +1,31 @@
+{
+    // ============================================================
+    // GITHUB COPILOT - Configuración de PromptOps
+    // ============================================================
+    "chat.promptFiles": false,
+    "github.copilot.chat.codeGeneration.useInstructionFiles": false,
+
+    // ============================================================
+    // EDITOR - Configuración general del editor
+    // ============================================================
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": false,
+
+    // ============================================================
+    // Tema - Configuración del tema de colores del proyecto
+    // ============================================================
+	"workbench.colorTheme": "Winter is Coming (Dark Black)",
+
+    // Fin de línea
+    "files.eol": "\r\n",
+    "files.trimTrailingWhitespace": false,
+
+	"git.autofetch": false,
+	"editor.minimap.enabled": false,
+	"editor.codeLens": false,
+	"editor.inlayHints.enabled": "offUnlessPressed",
+	"terminal.integrated.environmentChangesRelaunch": false,
+	"terminal.integrated.hideOnStartup": "always"
+}

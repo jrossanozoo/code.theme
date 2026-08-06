@@ -1,4 +1,20 @@
 <?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
+<!--
+	Campos nuevos por tema (respecto de Temas.ChatGPT/temas.xml):
+
+	  <barraSuperior>     Color de fondo de la barra superior (titleBar: donde esta el menu).
+	  <barraInferior>     Color de fondo de la barra inferior (statusBar: linea, columna, tipo de archivo, mensajes).
+	  <barraHerramientas> Color de fondo de la barra lateral de herramientas (activityBar).
+
+	Regla de fallback: si un tema deja estos 3 tags vacios, se comporta como hasta ahora
+	(barraSuperior, barraInferior y barraHerramientas toman el color <principal>, igual que
+	genera hoy generate-themes.ps1). Si se completan con un valor propio, esa barra deja de
+	usar <principal> y toma el color indicado, permitiendo distinguir barra superior / inferior
+	/ lateral tal como hace el tema "Winter is Coming"
+	(https://github.com/johnpapa/vscode-winteriscoming), donde la barra lateral de herramientas
+	comparte color con el area principal (#011627) y la barra inferior usa un color propio y
+	contrastante (#219FD5).
+-->
 <VFPData>
 	<c_temas>
 		<tema>sky</tema>
@@ -9,6 +25,9 @@
 		<comentario>#FFE1C2</comentario>
 		<diff1>#E1C2FF</diff1>
 		<diff2>#EDFFC2</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>heaven</tema>
@@ -19,6 +38,9 @@
 		<comentario>#FFE1C2</comentario>
 		<diff1>#E1C2FF</diff1>
 		<diff2>#EDFFC2</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>academy</tema>
@@ -29,6 +51,9 @@
 		<comentario>#FFE1C2</comentario>
 		<diff1>#E1C2FF</diff1>
 		<diff2>#EDFFC2</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>land</tema>
@@ -39,6 +64,9 @@
 		<comentario>#C2D0FF</comentario>
 		<diff1>#FFC2CE</diff1>
 		<diff2>#C3FFC2</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>forest</tema>
@@ -49,6 +77,9 @@
 		<comentario>#A6C8DE</comentario>
 		<diff1>#FFE1C2</diff1>
 		<diff2>#E9C2FF</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>summer</tema>
@@ -59,6 +90,9 @@
 		<comentario>#85B8D4</comentario>
 		<diff1>#F7C2FF</diff1>
 		<diff2>#C2FFC9</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>spring</tema>
@@ -69,6 +103,9 @@
 		<comentario>#FFFBC2</comentario>
 		<diff1>#DFC2FF</diff1>
 		<diff2>#C2FAFF</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>autumn</tema>
@@ -79,6 +116,9 @@
 		<comentario/>
 		<diff1/>
 		<diff2/>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>winter</tema>
@@ -89,6 +129,10 @@
 		<comentario/>
 		<diff1/>
 		<diff2/>
+		<!-- Valores tomados del tema real "Winter is Coming (Dark Blue)" -->
+		<barraSuperior>#112233</barraSuperior>
+		<barraInferior>#219FD5</barraInferior>
+		<barraHerramientas>#011627</barraHerramientas>
 	</c_temas>
 	<c_temas>
 		<tema>mountains</tema>
@@ -99,6 +143,9 @@
 		<comentario>#E0C790</comentario>
 		<diff1>#E1C2FF</diff1>
 		<diff2>#EDFFC2</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>academia</tema>
@@ -109,6 +156,9 @@
 		<comentario>#BF90DE</comentario>
 		<diff1>#00D6E3</diff1>
 		<diff2>#DB960C</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>RacingClub</tema>
@@ -119,6 +169,9 @@
 		<comentario>#99E37B</comentario>
 		<diff1>#B45CE0</diff1>
 		<diff2>#F5A536</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>Mensa</tema>
@@ -129,6 +182,9 @@
 		<comentario>#A6E6F5</comentario>
 		<diff1>#D6A1FF</diff1>
 		<diff2>#96FFBB</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>IronJohn</tema>
@@ -139,6 +195,9 @@
 		<comentario>#D69160</comentario>
 		<diff1>#8CFA9E</diff1>
 		<diff2>#D6D160</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 	<c_temas>
 		<tema>OpenSource</tema>
@@ -149,5 +208,8 @@
 		<comentario>#F5E6BC</comentario>
 		<diff1>#D6B6E0</diff1>
 		<diff2>#ABD17D</diff2>
+		<barraSuperior/>
+		<barraInferior/>
+		<barraHerramientas/>
 	</c_temas>
 </VFPData>

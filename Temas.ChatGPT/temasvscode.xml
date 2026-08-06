@@ -1,153 +1,115 @@
 <?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
 <VFPData>
-	<c_temas>
+	<temasvscode>
 		<tema>sky</tema>
 		<principal>#006B9C</principal>
 		<sintaxis>#7EFCFC</sintaxis>
 		<literal>#99FC7E</literal>
-		<enlaces>#C2CDFF</enlaces>
-		<comentario>#FFE1C2</comentario>
 		<diff1>#E1C2FF</diff1>
 		<diff2>#EDFFC2</diff2>
-	</c_temas>
-	<c_temas>
+	</temasvscode>
+	<temasvscode>
 		<tema>heaven</tema>
 		<principal>#1C6B75</principal>
 		<sintaxis>#7EFCFC</sintaxis>
 		<literal>#99FC7E</literal>
-		<enlaces>#C2CDFF</enlaces>
-		<comentario>#FFE1C2</comentario>
 		<diff1>#E1C2FF</diff1>
 		<diff2>#EDFFC2</diff2>
-	</c_temas>
-	<c_temas>
+	</temasvscode>
+	<temasvscode>
 		<tema>academy</tema>
 		<principal>#162A94</principal>
 		<sintaxis>#7EFCFC</sintaxis>
-		<literal>#99FC7E</literal>
-		<enlaces>#C2CDFF</enlaces>
-		<comentario>#FFE1C2</comentario>
+		<literal>238, 194</literal>
 		<diff1>#E1C2FF</diff1>
 		<diff2>#EDFFC2</diff2>
-	</c_temas>
-	<c_temas>
+	</temasvscode>
+	<temasvscode>
 		<tema>land</tema>
 		<principal>#664F03</principal>
 		<sintaxis>#FFF5C2</sintaxis>
-		<literal>#99FC7E</literal>
-		<enlaces>#C5C2FF</enlaces>
-		<comentario>#C2D0FF</comentario>
+		<literal>238, 194</literal>
 		<diff1>#FFC2CE</diff1>
 		<diff2>#C3FFC2</diff2>
-	</c_temas>
-	<c_temas>
+	</temasvscode>
+	<temasvscode>
 		<tema>forest</tema>
 		<principal>#044A02</principal>
 		<sintaxis>#C2FFC9</sintaxis>
 		<literal>#C2E1FF</literal>
-		<enlaces>#ACA6DE</enlaces>
-		<comentario>#A6C8DE</comentario>
 		<diff1>#FFE1C2</diff1>
 		<diff2>#E9C2FF</diff2>
-	</c_temas>
-	<c_temas>
+	</temasvscode>
+	<temasvscode>
 		<tema>summer</tema>
 		<principal>#4A4A02</principal>
 		<sintaxis>#FFFAC2</sintaxis>
 		<literal>#C2E6FF</literal>
-		<enlaces>#C3A4DE</enlaces>
-		<comentario>#85B8D4</comentario>
 		<diff1>#F7C2FF</diff1>
 		<diff2>#C2FFC9</diff2>
-	</c_temas>
-	<c_temas>
+	</temasvscode>
+	<temasvscode>
 		<tema>spring</tema>
 		<principal>#630059</principal>
 		<sintaxis>#F8C2FF</sintaxis>
 		<literal>#C5FFC2</literal>
-		<enlaces>#E3BB9D</enlaces>
-		<comentario>#FFFBC2</comentario>
 		<diff1>#DFC2FF</diff1>
 		<diff2>#C2FAFF</diff2>
-	</c_temas>
-	<c_temas>
+	</temasvscode>
+	<temasvscode>
 		<tema>autumn</tema>
 		<principal>#395200</principal>
 		<sintaxis/>
 		<literal/>
-		<enlaces/>
-		<comentario/>
 		<diff1/>
 		<diff2/>
-	</c_temas>
-	<c_temas>
+	</temasvscode>
+	<temasvscode>
 		<tema>winter</tema>
 		<principal>#300063</principal>
 		<sintaxis/>
 		<literal/>
-		<enlaces/>
-		<comentario/>
 		<diff1/>
 		<diff2/>
-	</c_temas>
-	<c_temas>
+	</temasvscode>
+	<temasvscode>
 		<tema>mountains</tema>
 		<principal>#230052</principal>
 		<sintaxis>#7EFCFC</sintaxis>
 		<literal>#99FC7E</literal>
-		<enlaces>#90A7E0</enlaces>
-		<comentario>#E0C790</comentario>
 		<diff1>#E1C2FF</diff1>
 		<diff2>#EDFFC2</diff2>
-	</c_temas>
-	<c_temas>
+	</temasvscode>
+	<temasvscode>
 		<tema>academia</tema>
 		<principal>#7D2AAD</principal>
 		<sintaxis>#3ED4ED</sintaxis>
 		<literal>#2B850F</literal>
-		<enlaces>#9208BD</enlaces>
-		<comentario>#BF90DE</comentario>
 		<diff1>#00D6E3</diff1>
 		<diff2>#DB960C</diff2>
-	</c_temas>
-	<c_temas>
+	</temasvscode>
+	<temasvscode>
 		<tema>RacingClub</tema>
 		<principal>#23A0FC</principal>
 		<sintaxis>#AADDFA</sintaxis>
 		<literal>#30A10B</literal>
-		<enlaces>#607AD6</enlaces>
-		<comentario>#99E37B</comentario>
 		<diff1>#B45CE0</diff1>
 		<diff2>#F5A536</diff2>
-	</c_temas>
-	<c_temas>
+	</temasvscode>
+	<temasvscode>
 		<tema>Mensa</tema>
 		<principal>#405BB3</principal>
 		<sintaxis>#91FFBF</sintaxis>
 		<literal>#FFC696</literal>
-		<enlaces>#A1DDFF</enlaces>
-		<comentario>#A6E6F5</comentario>
-		<diff1>#D6A1FF</diff1>
-		<diff2>#96FFBB</diff2>
-	</c_temas>
-	<c_temas>
+		<diff1>#96FFBB</diff1>
+		<diff2>#D6A1FF</diff2>
+	</temasvscode>
+	<temasvscode>
 		<tema>IronJohn</tema>
 		<principal>#46464D</principal>
 		<sintaxis>#B8FDFF</sintaxis>
 		<literal>#D9B7F7</literal>
-		<enlaces>#6085D6</enlaces>
-		<comentario>#D69160</comentario>
 		<diff1>#8CFA9E</diff1>
 		<diff2>#D6D160</diff2>
-	</c_temas>
-	<c_temas>
-		<tema>OpenSource</tema>
-		<principal>#2F069C</principal>
-		<sintaxis>#99FDFF</sintaxis>
-		<literal>#99FFA8</literal>
-		<enlaces>#ECCCFF</enlaces>
-		<comentario>#F5E6BC</comentario>
-		<diff1>#D6B6E0</diff1>
-		<diff2>#ABD17D</diff2>
-	</c_temas>
+	</temasvscode>
 </VFPData>
